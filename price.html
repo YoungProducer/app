@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/switcher.css">
+
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+    <script src="jsinclude/jquery-3.3.1.js" charset="utf-8"></script>
+    <script src="jsinclude/jquery-ui.js"></script>
+    <script src="jsinclude/jstransition.js"></script>
+</head>
+<body>
+    <section class="header-bar">
+            <div class="wrapper">
+                    <div class="header">
+                        <div class="header-content">
+                            <div class="logo">
+                                <h1 class="logo-text"><a href="#">MobiFix</a></h1>
+                            </div>
+                                
+                            <div class="navigation">
+                                <ul class="nav-bar">
+                                    <li><a href="#">Ремонт</a></li>
+                                    <li><a href="#">Аксесуари</a></li>
+                                    <li><a href="#">Необхідно знати</a></li>
+                                    <li><a href="#">Контакти</a></li>
+                                    <li><a href="#">Чому ми?</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="closed-club">
+                        <div class="closed-club-content">
+                            <form action="price.html" name="club">
+                                <input class="ccinput" type="text" name="ccser-name" value="" placeholder="Ім'я">
+                                <input class="ccinput" type="tel" name="ccuser-number" value="" placeholder="Номер телефону" autocomplete="off">
+                                <input class="ccbtn "type="submit" name="ccbutton" value="Приєднатися"></input>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <section class="photo-list">
+        <div class="image-wrapper">
+            <img src="img/5s.jpg" alt="">
+        </div>
+        <div class="image-wrapper">
+            <img src="img/se.jpg" alt="">
+        </div> 
+        <div class="image-wrapper">
+            <img src="img/6.1.jpg" alt="">
+        </div>
+        <div class="image-wrapper">
+            <img src="img/6s.jpg" alt="">
+        </div>
+        <div class="image-wrapper">
+            <img src="img/6.3.jpg" alt="">
+        </div>
+        <div class="image-wrapper">
+            <img src="img/6s+.jpg" alt="">
+        </div> 
+        <div class="image-wrapper">
+            <img src="img/7.1.jpg" alt="">
+        </div>
+        <div class="image-wrapper">
+            <img src="img/7+.jpg" alt="">
+        </div>
+        <div class="image-wrapper">
+            <img src="img/8.1.jpg" alt="">
+        </div>
+        <div class="image-wrapper">
+            <img src="img/8+.jpg" alt="">
+        </div>                
+    </section>
+    <section class="content-wrapper">
+        <div class="site-content">
+            <div class="price-list">
+                <div class="price-list-content">
+                    <h1 class="phone-name">
+                        Iphone 5s
+                    </h1>
+                    <form action="price.html" method="post" id="price-list-form" name="price-list">
+                        
+                    </form>
+                </div>
+            </div>
+            <div class="side-bar">
+                <div class="sidebar-content">
+                  <form action="price.html" method="post" class="pcform" name="pc">
+                        <h1>Ціна <span class="span-color">разом</span></h1>
+                        <div class="price">
+                            <h1 class="price-counter">0</h1><span class="currency"> грн.</span>
+                        </div>
+                        <input class="price-counter-input" type="text" name="pcprice" value="0">
+                        <!-- <div class="input-buffer"></div> -->
+                        <input class="pcinput" type="text" name="pcuser-name" placeholder="Ім'я">
+                        <input class="pcinput" type="text" name="pcuser-number" placeholder="Номер телефону" autocomplete="off">
+                        <hr>
+                        <div class="desc-block">
+                            <object data="img/location-pin.svg" type="image/svg+xml" class="reward-icon" style="fill: red"></object>
+                            <h2>Знаходимось поруч</h2>
+                        </div>
+                        <div class="desc-block">
+                            <object data="img/clock.svg" type="image/svg+xml" class="reward-icon" style="fill: red"></object>
+                            <h2>Ремонтуємо за 20 хв</h2>
+                        </div>
+                        <div class="desc-block">
+                            <object data="img/medal1.svg" type="image/svg+xml" class="reward-icon" style="fill: red"></object>
+                            <h2>Даємо гарантію на 1 рік</h2>
+                        </div>
+                        <input class="pcbtn" type="submit" value="Записатись на ремонт">
+                  </form>          
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="es5/app.js"></script>
+</body>
+</html>

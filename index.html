@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/switcher.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+  <!-- <script src="https://unpkg.com/react@16/umd/react.development.js"></script> -->
+  <!-- <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> -->
+
+  <!-- Don't use this in production: -->
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+  <script src="jsinclude/jquery-3.3.1.js" charset="utf-8"></script>
+  <!-- <script src="js/jquery-3.3.1.js" charset="utf-8"></script> -->
+  <!-- <script src="js/jquery-ui.js" charset="utf-8"></script> -->
+</head>
+<body>
+  <div id="root">
+    <div class="header-bar grid-fluid">
+      <div class="container">
+        <div class="header grid">
+          <div class="container">
+            <div class="grid-fluid">
+              <div class="logo">
+                <div class="logo-img">
+                  <a href="#" class="logo-text">MobiFix</a>
+                  <!-- <img src="" alt=""> -->
+                </div>
+              </div>
+              <div class="nav-bar">
+                <ul class="nav-bar-list">
+                  <li class="nav-bar-list-item"><a href="price.html">Ремонт</a></li>
+                  <li class="nav-bar-list-item"><a href="#">Аксесуари</a></li>
+                  <li class="nav-bar-list-item"><a href="#">Необхідно знати</a></li>
+                  <li class="nav-bar-list-item"><a href="#">Контакти</a></li>
+                  <li class="nav-bar-list-item"><a href="#">Чому ми?</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="closed-club grid-fluid">
+      <div class="container">
+        <div class="closed-club-info grid">
+          <div class="container">
+            <h2 class="closed-club-text">
+              Стань учасником закритого клубу
+            </h2>
+            <form class="closed-club-form container" action="index.html" method="post">
+              <input class="ccinput" type="text" name="user-name" value="" placeholder="Ім'я">
+              <input class="ccinput" type="tel" name="user-number" value="" pattern="[0-9]{10}" placeholder="Номер телефону">
+              <button class="ccbtn "type="submit" name="button" value="">Приєднатися</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="iphone-repair grid-fluid">
+        <div class="container">
+          <div class="iphone-repair-bar grid">
+            <div class="container">
+              <div class="iphone-repair-content">
+                <h1><a href="#">Ремонт iPhone і переваги ремонту у нас</a></h1>
+                <!-- <img src="img/01-iPhone-7-Announce-1.jpg" alt="iPhone"> -->
+                <img src="img/iphone_xr_5e40f_largetall.jpg" alt="iphone">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divide-row"></div>
+      <div class="accessories-qr grid-fluid">
+        <div class="container">
+          <div class="accessories" id="acc">
+            <form action="" class="main">
+              <input id="check" type="checkbox">
+              <label id="lblchech" for="check"></label>
+            </form>
+          </div>
+          <div class="qr-scan">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- <script src="es5/switcher.js" charset="utf-8"></script> -->
+  <!-- <script src="es5/main.js" charset="utf-8"></script> -->
+  <script src="es5/app.js" charset="utf-8"></script>
+
+  <!-- <script type="text/babel" src="js/main.js" charset="utf-8"></script> -->
+  <!-- <script type="text/babel" src="js/fx.js" charset="utf-8"></script> -->
+</body>
+</html>
