@@ -1,5 +1,5 @@
 export function cc() {
-    let photoListSection = $('.photo-list')
+    let photoListSection = $('#photo-list')
 
     if (photoListSection.length !== 0) {
         let headerBarHeight = $('.header-bar').css('height')
