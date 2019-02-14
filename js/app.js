@@ -1,22 +1,23 @@
 import React, {Component} from 'react'
 import ReactDOM, {render} from 'react-dom'
 import posed from 'react-pose'
-import PriceList from './addons/pricelist'
-import './price'
+
+import PriceList from './addons/price/pricelist'
 import {priceContentWrapperSetUp, scroll } from './price'
-import ImageList from './addons/image-list'
-import {setPhotoListWraperSize} from './addons/image-list'
+import PhonesList from './addons/index/Phones-list'
 
-ReactDOM.render(<PriceList />, document.getElementById('price-list-form'))
-ReactDOM.render(<ImageList />, document.getElementById('photo-list'))
+let phonesBar = document.getElementById('phones-bar')
+let priceListForm = document.getElementById('price-list-form')
+
+if (phonesBar !== null) {
+    ReactDOM.render(<PhonesList />, phonesBar)
+}
+
+if (priceListForm !== null) {
+    ReactDOM.render(<PriceList/>, priceListForm)
+}
 
 
 
 
-setPhotoListWraperSize()
-// Set up price wrapper size
 priceContentWrapperSetUp()
-
- $('.image-wrapper:eq(0)').click(function() {
-    scroll()
-})

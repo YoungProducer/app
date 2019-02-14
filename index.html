@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/switcher.css">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 
@@ -24,79 +23,64 @@
   <!-- <script src="js/jquery-ui.js" charset="utf-8"></script> -->
 </head>
 <body>
-  <div id="root">
-    <div class="header-bar grid-fluid">
-      <div class="container">
-        <div class="header grid">
-          <div class="container">
-            <div class="grid-fluid">
-              <div class="logo">
-                <div class="logo-img">
-                  <a href="#" class="logo-text">MobiFix</a>
-                  <!-- <img src="" alt=""> -->
+    <section class="header-bar">
+        <div class="wrapper">
+                <div class="header">
+                    <div class="header-content">
+                        <div class="logo">
+                            <h1 class="logo-text"><a href="#">MobiFix</a></h1>
+                        </div>
+                            
+                        <div class="navigation">
+                            <ul class="nav-bar">
+                                <li><a href="#" id="repair">Ремонт</a></li>
+                                <li><a href="#">Аксесуари</a></li>
+                                <li><a href="#">Необхідно знати</a></li>
+                                <li><a href="#">Контакти</a></li>
+                                <li><a href="#">Чому ми?</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="nav-bar">
-                <ul class="nav-bar-list">
-                  <li class="nav-bar-list-item"><a href="price.html">Ремонт</a></li>
-                  <li class="nav-bar-list-item"><a href="#">Аксесуари</a></li>
-                  <li class="nav-bar-list-item"><a href="#">Необхідно знати</a></li>
-                  <li class="nav-bar-list-item"><a href="#">Контакти</a></li>
-                  <li class="nav-bar-list-item"><a href="#">Чому ми?</a></li>
-                </ul>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="closed-club grid-fluid">
-      <div class="container">
-        <div class="closed-club-info grid">
-          <div class="container">
-            <h2 class="closed-club-text">
-              Стань учасником закритого клубу
-            </h2>
-            <form class="closed-club-form container" action="index.html" method="post">
-              <input class="ccinput" type="text" name="user-name" value="" placeholder="Ім'я">
-              <input class="ccinput" type="tel" name="user-number" value="" pattern="[0-9]{10}" placeholder="Номер телефону">
-              <button class="ccbtn "type="submit" name="button" value="">Приєднатися</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content">
-      <div class="iphone-repair grid-fluid">
-        <div class="container">
-          <div class="iphone-repair-bar grid">
-            <div class="container">
-              <div class="iphone-repair-content">
-                <h1><a href="#">Ремонт iPhone і переваги ремонту у нас</a></h1>
-                <!-- <img src="img/01-iPhone-7-Announce-1.jpg" alt="iPhone"> -->
-                <img src="img/iphone_xr_5e40f_largetall.jpg" alt="iphone">
-              </div>
+            <div id="phones-bar">
+                <!-- <ul class="phones-list">
+                  <li><a href="#">iPhone 5S</a></li>
+                  <li><a href="#">iPhone SE</a></li>
+                  <li><a href="#">iPhone 6</a></li>
+                  <li><a href="#">iPhone 6S</a></li>
+                  <li><a href="#">iPhone 6+</a></li>
+                  <li><a href="#">iPhone 6S+</a></li>
+                  <li><a href="#">iPhone 7+</a></li>
+                  <li><a href="#">iPhone 7+</a></li>
+                  <li><a href="#">iPhone 8</a></li>
+                  <li><a href="#">iPhone 8+</a></li>
+                </ul>          -->
             </div>
-          </div>
+            <div class="wrapper">
+                <div class="closed-club">
+                    <div class="closed-club-content">
+                        <h1>Стань учасником закритого клубу</h1>
+                        <form action="price.html" name="club">
+                            <input class="ccinput" type="text" name="ccser-name" value="" placeholder="Ім'я">
+                            <input class="ccinput" type="tel" name="ccuser-number" value="" placeholder="Номер телефону" autocomplete="off">
+                            <input class="ccbtn "type="submit" name="ccbutton" value="Приєднатися"></input>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>                
+  </section>
+  <section class="iphone-repair">
+      <div class="iphone-player">
+        <h1 class="adv">Ремонт iPhone та переваги ремонту у нас</h1>
+        <div class="iphone-video">
+            <video class="ivideo" aria-label="Introductory animation for iPhone XS." data-source-locale="us" data-source-name="hero" muted="" playsinline="" src="img/iphonexs.mp4"></video>
         </div>
       </div>
-      <div class="divide-row"></div>
-      <div class="accessories-qr grid-fluid">
-        <div class="container">
-          <div class="accessories" id="acc">
-            <form action="" class="main">
-              <input id="check" type="checkbox">
-              <label id="lblchech" for="check"></label>
-            </form>
-          </div>
-          <div class="qr-scan">
+  </section>
 
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
+  
 
   <!-- <script src="es5/switcher.js" charset="utf-8"></script> -->
   <!-- <script src="es5/main.js" charset="utf-8"></script> -->
