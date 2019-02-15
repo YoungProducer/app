@@ -1,137 +1,296 @@
-body
-  padding: 0
-  margin: 0
-  height: 1000px
-  width: 100%
-  font-size: 1em
-  font-family: 'Sf-Pro' 
+@mixin linear-gradient($direction, $color-stops...) 
+    @if is-direction($direction) == false 
+        $color-stops: ($direction, $color-stops);
+        $direction: 180deg
+    
+    
+*
+    margin: 0
+    padding: 0
+    font-family: 'sf-pro'
+    font-size: 1em
 
-#root
-  width: 100%
+h1 
+    font-size: 200%
 
-.divide-row
-  background-color: #222
-  width: 100%
-  height: 15px
+hr 
+    border: 1px solid #ddd
 
-.header-bar
-  background: #2C2C2C
+.wrapper
+    width: 100%
 
-.header
-  height: 100%
+.header-bar 
 
+.header 
+    background-color: #2C2C2C
+    width: 100%
+    // position: fixed
+    z-index: 1000
+
+.header-content
+    width: 1200px
+    margin: auto
+    height: 35px
+    
 .logo
-  grid-column: 2/4
-  text-align: center
-
-.logo-img
+    float: left
+    margin-left: 40px
 
 .logo-text
-  color: #fff
-  padding: 0
-  margin: 0
-  margin-right: 20px
-  height: 100%
-  width: 100%
-  font-size: 180%
-  text-decoration: none
+    font-size: 200%
+    line-height: 35px
+    font-weight: 100
 
-.nav-bar
-  grid-column: 4/14
-  text-align: center
+.logo-text a
+    text-decoration: none
+    color: #fff
 
-.nav-bar-list
-  list-style: none
-  margin: 0
-  padding-left: 0
+.navigation 
+    line-height: 35px
 
-.nav-bar-list a
-  color: #fff
-  text-decoration: none
+.nav-bar 
+    list-style: none
+    float: right
 
-.nav-bar-list a:hover
-  color: #B6B6B6
+.nav-bar li 
+    display: inline-block
+    margin-right: 40px
 
-.nav-bar-list a, a:hover
-  transition: all .2s ease-in-out
+.nav-bar li a
+    color: #fff
+    text-decoration: none
+    transition: color .2s ease-in-out
 
-.nav-bar-list-item
-  display: inline-block
-  font-size: 100%
-  margin-right: 50px
-  margin-top: 8px
+.nav-bar li a:hover
+    color: #B6B6B6
+    transition: color .2s ease-in-out
+
+#phones-bar
+    // height: 60px
+    // line-height: 60px
+    // background-color: #fff
+    // padding-top: 35px
+    // margin: auto
+    // text-align: center
+    // background-color: #262626
+    z-index: 0
+    
+.phones-list
+    list-style: none
+    background-color: #fff
+    text-align: center
+    background-color: #262626
+
+.phones-list li
+    display: inline-block
+    margin-right: 30px
+    text-decoration: none
+
+.phones-list li a 
+    color: #fff
+    text-decoration: none
 
 .closed-club
-  background-color: #000
-  height: 100%
+    width: 100%
+    background-color: #000
+    // padding-top: 35px
 
-.closed-club-info
-  text-align: center
+.closed-club-content 
+    width: 1200px
+    margin: auto
+    text-align: center
+    padding-bottom: 20px
 
-.closed-club-text
-  margin: 0
-  margin-top: 10px
-  color: #fff
-  letter-spacing: 4px
+.closed-club-content h1 
+    color: #fff
+    font-weight: 100
+    padding: 20px 0 0 0
+    margin: 0 0 20px 0
 
-.closed-club-form
-  margin-top: 10px
-  margin-bottom: 20px
-
-.ccinput
-  padding: 8px
-  outline: none
-  margin-right: 25px
-  border: none
-  transition: all .2s ease
-  background-color: #fff
-  color: #000
-  border-radius: 5px
+.ccinput 
+    border: none
+    border-radius: 5px
+    height: 30px
+    margin-right: 30px
+    padding-left: 8px
+    transition: transform .2s ease-in-out
+    line-height: 30px
 
 .ccinput:hover, .ccinput:focus
-  transform: scale(1.1)
-  box-shadow: 2px 2px 20px #333
-  transition: all .2s ease
-  overflow: none
+    transform: scale(1.1)
+    transition: transform .2s ease-in-out
+    outline: none
 
-.ccinput::placeholder 
-  color: #000
-
-.ccbtn
-  background-color: #6bf
-  color: #fff
-  padding: 8px 30px 8px 30px
-  border: none
-  border-radius: 5px
-  box-shadow: 2px 2px 20px #333
-  transition: all .2s ease
-  
+.ccbtn 
+    border: none
+    border-radius: 5px
+    color: #fff
+    background-color: #6bf
+    height: 30px
+    width: 140px
+    transition: transform .2s ease-in-out
+    cursor: pointer
 
 .ccbtn:hover
-  transform: scale(1.1)
-  box-shadow: 2px 2px 20px #333
-  transition: all .2s ease
-  overflow: none
-
-.content
+    transform: scale(1.1)
+    transition: transform .2s ease-in-out
 
 .iphone-repair
-  background-color: #000
-  text-align: center
-  height: auto
-  // height: 606px
+    width: 100%
+    height: 100px
+    text-align: center
 
-.iphone-repair-content
-  height: auto
+.iphone-player 
+    background-color: #000
 
-.iphone-repair-content h1 a
-  color: #fff
-  text-decoration: none
-  font-size: 160%
+.iphone-player h1 
+    color: #fff
+    padding: 20px
 
-.iphone-repair-content h1 a:hover
-  color: #ccc
+.iphone-video
 
-.iphone-repair-content img
-  width: 100%
-  height: auto
+.content-wrapper
+    background-color: #f6f6f6
+    height: 100%
+    width: 100%
+
+.site-content
+    width: 1200px
+    height: auto
+    margin: auto
+    background: #F6F6F6
+    padding-top: 70px
+
+.price-list
+    float: left
+    height: 100%
+    margin: 0
+    padding: 0
+
+.price-list-content
+    max-width: 800px
+    width: 730px
+    text-align: center
+    padding: 35px
+    background-color: #fafafa
+    border: 2px solid #e3e3e3
+    border-radius: 5px
+
+.phone-name
+    font-size: 200%
+    margin-top: 20px
+    margin-bottom: 10px
+    color: #2c2c2c
+
+.service-table
+    width: 100%
+    border-collapse: collapse
+
+.service-table tbody tr td
+    border-bottom: 2px solid #ddd
+    border-right: none
+
+.service-table tbody tr:first-child td 
+    border-top: 2px solid #ddd
+
+.service-iphone-btn
+    width: 60px
+
+.service-name
+    text-align: left
+    height: 50px
+
+.service-price
+    text-align: right
+
+.side-bar 
+    float: right
+    padding: 35px
+    background-color: #fafafa
+    border: 2px solid #e3e3e3
+    border-radius: 5px
+    width: 300px
+    text-align: center
+
+.span-color
+    color: #DF594E
+
+.currency
+    margin-left: 5px
+    font-size: 200%
+    font-weight: bold
+
+.price-counter 
+    margin-bottom: 10px
+    display: inline-block
+
+.price-counter-input
+    border: none
+    background: #fafafa
+    text-align: right
+    font-size: 10%
+    height: 10px
+    width: 100px
+    font-weight: bold
+    visibility: hidden
+
+.input-buffer
+    font-size: 200%
+    font-family: 'sf-pro'
+
+.input-buffer 
+    position: absolute
+    top: -1000px
+    left: -1000px
+    visibility: hidden
+    white-space: nowrap
+
+.price
+    text-align: center
+
+.pcform
+    text-align: center
+
+.pcinput
+    width: 200px
+    height: 30px
+    padding-left: 8px
+    margin-bottom: 15px
+    border: 1px solid #ddd
+    background-color: #fff
+
+.pcbtn
+    width: 210px
+    height: 32px
+    color: #fff
+    background-color: #DF594E
+    border: 1px solid #A6433A
+    border-radius: 3px
+    margin-top: 20px
+    cursor: pointer
+    transition: all .3s ease-in-out
+
+.pcbtn:hover
+    transition: all .3s ease-in-out
+    background-color: #fff
+    color: #DF564E
+
+.desc-block
+    height: 50px
+    text-align: center
+    margin-top: 20px
+    width: 250px
+    padding-left: 10px
+    
+.desc-block h2
+    margin: 0
+    padding: 0
+    line-height: 50px
+    display: inline-block
+
+.reward-icon
+    height: 50px
+    width: 50px
+    fill: #fff
+    float: left
+    
