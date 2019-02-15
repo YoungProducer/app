@@ -1,23 +1,20 @@
 import React, {Component} from 'react'
-import ReactDOM, {render} from 'react-dom'
 import posed from 'react-pose'
 
-import PriceList from './addons/price/pricelist'
-import {priceContentWrapperSetUp, scroll } from './price'
-import PhonesList from './addons/index/Phones-list'
+import HeaderBar from './components/headerBar'
+import VideoPlayer from './components/videoplayer'
 
-let phonesBar = document.getElementById('phones-bar')
-let priceListForm = document.getElementById('price-list-form')
+export default class App extends Component {
+    state = {
 
-if (phonesBar !== null) {
-    ReactDOM.render(<PhonesList />, phonesBar)
+    }
+
+    render() {
+        return (
+            <>
+                <HeaderBar desc="Стань учасником закритого клубу"/>
+                <VideoPlayer link="../img/iphonexs.mp4"/>
+            </>            
+        )
+    }
 }
-
-if (priceListForm !== null) {
-    ReactDOM.render(<PriceList/>, priceListForm)
-}
-
-
-
-
-priceContentWrapperSetUp()

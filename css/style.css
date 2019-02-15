@@ -15,8 +15,7 @@ hr {
 
 .header {
   background-color: #2C2C2C;
-  width: 100%;
-  z-index: 1000; }
+  width: 100%; }
 
 .header-content {
   width: 1200px;
@@ -67,7 +66,8 @@ hr {
   list-style: none;
   background-color: #fff;
   text-align: center;
-  background-color: #262626; }
+  background-color: #262626;
+  line-height: 60px; }
 
 .phones-list li {
   display: inline-block;
@@ -76,7 +76,16 @@ hr {
 
 .phones-list li a {
   color: #fff;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: color .2s ease-in-out;
+  -o-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out; }
+
+.phones-list li a:hover {
+  color: #b6b6b6;
+  -webkit-transition: color .2s ease-in-out;
+  -o-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out; }
 
 .closed-club {
   width: 100%;
@@ -132,7 +141,8 @@ hr {
   -o-transition: transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
   transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
 
 .ccbtn:hover {
   -webkit-transform: scale(1.1);

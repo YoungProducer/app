@@ -25,7 +25,7 @@ hr
     background-color: #2C2C2C
     width: 100%
     // position: fixed
-    z-index: 1000
+    // z-index: 1000
 
 .header-content
     width: 1200px
@@ -80,6 +80,7 @@ hr
     background-color: #fff
     text-align: center
     background-color: #262626
+    line-height: 60px
 
 .phones-list li
     display: inline-block
@@ -89,6 +90,11 @@ hr
 .phones-list li a 
     color: #fff
     text-decoration: none
+    transition: color .2s ease-in-out
+
+.phones-list li a:hover 
+    color: #b6b6b6 
+    transition: color .2s ease-in-out
 
 .closed-club
     width: 100%
@@ -130,6 +136,7 @@ hr
     width: 140px
     transition: transform .2s ease-in-out
     cursor: pointer
+    outline: none
 
 .ccbtn:hover
     transform: scale(1.1)
