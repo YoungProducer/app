@@ -10,13 +10,19 @@ h1 {
 hr {
   border: 1px solid #ddd; }
 
+.grey-row {
+  background-color: #2C2C2C;
+  border-top: solid 1px #232323;
+  border-bottom: solid 1px #232323;
+  height: 15px;
+  width: 100%; }
+
 .wrapper {
   width: 100%; }
 
 .header {
   background-color: #2C2C2C;
-  width: 100%;
-  z-index: 1000; }
+  width: 100%; }
 
 .header-content {
   width: 1200px;
@@ -67,7 +73,8 @@ hr {
   list-style: none;
   background-color: #fff;
   text-align: center;
-  background-color: #262626; }
+  background-color: #262626;
+  line-height: 60px; }
 
 .phones-list li {
   display: inline-block;
@@ -76,7 +83,16 @@ hr {
 
 .phones-list li a {
   color: #fff;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: color .2s ease-in-out;
+  -o-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out; }
+
+.phones-list li a:hover {
+  color: #b6b6b6;
+  -webkit-transition: color .2s ease-in-out;
+  -o-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out; }
 
 .closed-club {
   width: 100%;
@@ -92,7 +108,10 @@ hr {
   color: #fff;
   font-weight: 100;
   padding: 20px 0 0 0;
-  margin: 0 0 20px 0; }
+  margin: 0; }
+
+.closed-club-content form {
+  padding-top: 20px; }
 
 .ccinput {
   border: none;
@@ -132,7 +151,8 @@ hr {
   -o-transition: transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
   transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
 
 .ccbtn:hover {
   -webkit-transform: scale(1.1);
@@ -146,7 +166,7 @@ hr {
 
 .iphone-repair {
   width: 100%;
-  height: 100px;
+  height: 100%;
   text-align: center; }
 
 .iphone-player {
@@ -166,7 +186,7 @@ hr {
   height: auto;
   margin: auto;
   background: #F6F6F6;
-  padding-top: 70px; }
+  margin-top: 70px; }
 
 .price-list {
   float: left;
@@ -175,8 +195,8 @@ hr {
   padding: 0; }
 
 .price-list-content {
-  max-width: 800px;
-  width: 730px;
+  max-width: 850px;
+  width: 850px;
   text-align: center;
   padding: 35px;
   background-color: #fafafa;
@@ -266,7 +286,8 @@ hr {
   padding-left: 8px;
   margin-bottom: 15px;
   border: 1px solid #ddd;
-  background-color: #fff; }
+  background-color: #fff;
+  outline: none; }
 
 .pcbtn {
   width: 210px;
@@ -280,7 +301,8 @@ hr {
   cursor: pointer;
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out; }
+  transition: all .3s ease-in-out;
+  outline: none; }
 
 .pcbtn:hover {
   -webkit-transition: all .3s ease-in-out;
