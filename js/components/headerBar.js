@@ -4,8 +4,28 @@ import PhoneList            from './phoneslist'
 import CCForm               from './closedclubform'
 
 export default class HeaderBar extends Component {
-    state = {
-        phoneListHidden: true
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            phoneListHidden: true,
+            phonesClass: "phone-name-hidden"
+        }
+
+        this.onClickHandle = this.onClickHandle.bind(this)
+    }
+
+    onClickHandle() {
+        this.setState({phoneListHidden: !this.state.phoneListHidden})
+
+        if (!this.state.phoneListHidden) {
+            setTimeout(() =>  {
+                this.setState({phonesClass: "phone-name-hidden"})
+            }, 700)
+        } else {
+            this.setState({phonesClass: ""})
+            console.log(this.state.phonesClass)
+        }
     }
 
     render() {
@@ -21,7 +41,7 @@ export default class HeaderBar extends Component {
                             <div className="navigation">
                                 <ul className="nav-bar">
                                     <li><a href="#" id="repair" 
-                                    onClick={() => {this.setState({phoneListHidden: !this.state.phoneListHidden})}}>Ремонт</a></li>
+                                    onClick={this.onClickHandle}>Ремонт</a></li>
                                     <li><a href="#">Аксесуари</a></li>
                                     <li><a href="#">Необхідно знати</a></li>
                                     <li><a href="#">Контакти</a></li>
@@ -31,7 +51,7 @@ export default class HeaderBar extends Component {
                         </div>
                     </div>
                 </div>
-                <PhoneList hidden={this.state.phoneListHidden}/>
+                <PhoneList hidden={this.state.phoneListHidden} cName={this.state.phonesClass}/>
                 <CCForm description={this.props.desc} isDescription={this.props.isdesc}/>
             </>
         )

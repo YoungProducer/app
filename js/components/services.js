@@ -38,6 +38,7 @@ class ServicesList extends React.PureComponent {
         axios
             .get('http://127.0.0.1/price.php?name=' + this.state.selectedPhone.slice(this.state.selectedPhone.indexOf(" ") + 1))
             .then((response) => {
+                console.log(response.data)
                 this.setState({pricelist: response.data})
             })
             .catch((response) => {

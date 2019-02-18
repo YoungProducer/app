@@ -33,20 +33,25 @@ const PhList = posed.ul({
 })
 
 export default class PhonesList extends Component {
-    state = {
-        hidden: true,
-        phones: [
-            {name: 'iPhone 5S',  link: 'price.html'},
-            {name: 'iPhone SE',  link: 'price.html'},
-            {name: 'iPhone 6',   link: 'price.html'},
-            {name: 'iPhone 6S',  link: 'price.html'},
-            {name: 'iPhone 6+',  link: 'price.html'},
-            {name: 'iPhone 6S+', link: 'price.html'},
-            {name: 'iPhone 7',   link: 'price.html'},
-            {name: 'iPhone 7+',  link: 'price.html'},
-            {name: 'iPhone 8',   link: 'price.html'},
-            {name: 'iPhone 8+',  link: 'price.html'},
-        ]
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            hidden: this.props.hidden,
+            cName: "phone-name-hidden",
+            phones: [
+                {name: 'iPhone 5S',  link: 'price.html'},
+                {name: 'iPhone SE',  link: 'price.html'},
+                {name: 'iPhone 6',   link: 'price.html'},
+                {name: 'iPhone 6S',  link: 'price.html'},
+                {name: 'iPhone 6+',  link: 'price.html'},
+                {name: 'iPhone 6S+', link: 'price.html'},
+                {name: 'iPhone 7',   link: 'price.html'},
+                {name: 'iPhone 7+',  link: 'price.html'},
+                {name: 'iPhone 8',   link: 'price.html'},
+                {name: 'iPhone 8+',  link: 'price.html'},
+            ]
+        }
     }
 
     createElements() {
@@ -71,7 +76,7 @@ export default class PhonesList extends Component {
                 <PhList className="phones-list" pose={this.props.hidden ? 'hidden' : 'visible'}>
                     {/* {this.createElements()} */}
                     <PhoneElement>
-                        <a 
+                        <a  className={this.props.cName}
                             href={this.state.phones[0].link}
                             onClick={() => this.onClickHandle(this.state.phones[0].name)}
                         >
@@ -80,7 +85,7 @@ export default class PhonesList extends Component {
                     </PhoneElement>
                     
                     <PhoneElement>
-                        <a 
+                        <a  className={this.props.cName}
                             href={this.state.phones[1].link}
                             onClick={() => this.onClickHandle(this.state.phones[1].name)}
                         >
@@ -89,7 +94,7 @@ export default class PhonesList extends Component {
                     </PhoneElement>
 
                     <PhoneElement>
-                        <a 
+                        <a  className={this.props.cName}
                             href={this.state.phones[2].link}
                             onClick={() => this.onClickHandle(this.state.phones[2].name)}
                         >
@@ -98,7 +103,7 @@ export default class PhonesList extends Component {
                     </PhoneElement>
 
                     <PhoneElement>
-                        <a 
+                        <a  className={this.props.cName}
                             href={this.state.phones[3].link}
                             onClick={() => this.onClickHandle(this.state.phones[3].name)}
                         >
@@ -107,7 +112,7 @@ export default class PhonesList extends Component {
                     </PhoneElement>
 
                     <PhoneElement>
-                        <a 
+                        <a  className={this.props.cName}
                             href={this.state.phones[4].link}
                             onClick={() => this.onClickHandle(this.state.phones[4].name)}
                         >
@@ -116,7 +121,7 @@ export default class PhonesList extends Component {
                     </PhoneElement>
 
                     <PhoneElement>
-                        <a 
+                        <a  className={this.props.cName}
                             href={this.state.phones[5].link}
                             onClick={() => this.onClickHandle(this.state.phones[5].name)}
                         >
@@ -125,7 +130,7 @@ export default class PhonesList extends Component {
                     </PhoneElement>
 
                     <PhoneElement>
-                        <a 
+                        <a  className={this.props.cName}
                             href={this.state.phones[6].link}
                             onClick={() => this.onClickHandle(this.state.phones[6].name)}
                         >
@@ -134,7 +139,7 @@ export default class PhonesList extends Component {
                     </PhoneElement>
 
                     <PhoneElement>
-                        <a 
+                        <a  className={this.props.cName}
                             href={this.state.phones[7].link}
                             onClick={() => this.onClickHandle(this.state.phones[7].name)}
                         >
@@ -143,7 +148,7 @@ export default class PhonesList extends Component {
                     </PhoneElement>
 
                     <PhoneElement>
-                        <a 
+                        <a  className={this.props.cName}
                             href={this.state.phones[8].link}
                             onClick={() => this.onClickHandle(this.state.phones[8].name)}
                         >
@@ -152,7 +157,7 @@ export default class PhonesList extends Component {
                     </PhoneElement>
 
                     <PhoneElement>
-                        <a 
+                        <a  className={this.props.cName}
                             href={this.state.phones[9].link}
                             onClick={() => this.onClickHandle(this.state.phones[9].name)}
                         >
