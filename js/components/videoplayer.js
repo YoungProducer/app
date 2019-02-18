@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Player, { ControlBar } from 'video-react'
+//import Player, { ControlBar } from 'video-react'
 import posed from 'react-pose'
 
 export default class VideoPlayer extends Component {
@@ -7,7 +7,7 @@ export default class VideoPlayer extends Component {
         super() 
 
         this.state = {
-            source: '../img/iphonexs.mp4'
+            source: 'img/iphonexs.mp4'
         }
 
     }

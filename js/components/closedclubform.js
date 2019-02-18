@@ -30,15 +30,21 @@ export default class CCForm extends Component {
         })
     }
 
+    inputHadler(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
     render() {
         return(
             <div className="wrapper">
                 <div className="closed-club">
                 <div className="closed-club-content">
-                    <h1>{this.props.description}</h1>
+                    {this.props.isDescription ? <h1>{this.props.description}</h1> : <></>}
                         <form action="" name="club">
-                            <input className="ccinput" onChange={this.inputChange} type="text" name="ccname" placeholder="Ім'я"/>
-                            <input className="ccinput" onChange={this.inputChange} type="tel" name="ccusernumber" placeholder="Номер телефону"/>
+                            <input className="ccinput" onChange={this.inputHadler} type="text" name="ccname" placeholder="Ім'я"/>
+                            <input className="ccinput" onChange={this.inputHadler} type="tel" name="ccusernumber" placeholder="Номер телефону"/>
                             <input className="ccbtn" type="button" name="ccbutton" value="Приєднатися" onClick={this.sendAjaxQuery}/>
                         </form>
                     </div>
@@ -47,3 +53,5 @@ export default class CCForm extends Component {
         )
     }
 }
+
+// <h1>{this.props.description}</h1>
