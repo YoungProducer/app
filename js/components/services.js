@@ -14,28 +14,31 @@ class ServicesList extends React.PureComponent {
             selectedPhone: localStorage.getItem('selectedPhone'),
 
             pricelist: [
-                {name: "Заміна екрану (Оригінал)", price: 850},
-                {name: "Реставрація дисплея", price: 550},
-                {name: "Заміна корпусу", price: 800},
-                {name: "Заміна акумулятора", price: 397},
-                {name: "Заміна основної камери", price: 350},
-                {name: "Заміна фронтальної камери", price: 350},
-                {name: "Заміна кнопки Home", price: 250},
-                {name: "Заміна кнопки Увімкнення", price: 250},
-                {name: "Заміна динаміка", price: 197},      
-                {name: "Заміна слухового динаміка", price: 197},
-                {name: "Заміна гнізда lighting", price: 350},
-                {name: "Поклейка захисного скла", price: 99}  
+                // ["Заміна екрану (Оригінал)", 850],
+                // ["Реставрація дисплея",  550],
+                // ["Заміна корпусу",  800],
+                // ["Заміна акумулятора",  397],
+                // ["Заміна основної камери",  350],
+                // ["Заміна фронтальної камери",  350],
+                // ["Заміна кнопки Home",  250],
+                // ["Заміна кнопки Увімкнення",  250],
+                // ["Заміна динаміка",  197],      
+                // ["Заміна слухового динаміка",  197],
+                // ["Заміна гнізда lighting",  350],
+                // ["Поклейка захисного скла",  99]
             ]
         }
     }
 
     componentDidMount() {
-        console.log(this.state.selectedPhone)
+        // console.log(this.state.selectedPhone.slice(this.state.selectedPhone.indexOf(" ")))
+
+
+
         axios
-            .get('price.html/phone?phone=' + this.state.selectedPhone)
-            .then(({ data }) => {
-                this.setState({pricelist: data})
+            .get('http://127.0.0.1/price.php?name=' + this.state.selectedPhone.slice(this.state.selectedPhone.indexOf(" ") + 1))
+            .then((response) => {
+                this.setState({pricelist: response.data})
             })
             .catch((response) => {
                 console.log(response)
@@ -48,10 +51,10 @@ class ServicesList extends React.PureComponent {
 
                 <tr key={index}>
                     <td className="service-iphone-btn">
-                        <Switcher swid={index} sname={service.name} sprice={service.price}/>
+                        <Switcher swid={index} sname={service[0]} sprice={service[1]}/>
                     </td>
-                    <td className="service-name">{service.name}</td>
-                    <td className="service-price">{service.price + ' грн.'}</td>
+                    <td className="service-name">{service[0]}</td>
+                    <td className="service-price">{service[1] + ' грн.'}</td>
                 </tr>
             )
         })
