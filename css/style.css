@@ -94,6 +94,9 @@ hr {
   -o-transition: color .2s ease-in-out;
   transition: color .2s ease-in-out; }
 
+.phone-name-hidden {
+  display: none; }
+
 .closed-club {
   width: 100%;
   background-color: #000; }
